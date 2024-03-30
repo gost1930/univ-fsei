@@ -293,23 +293,23 @@
         // }
     </script>
    <script>
-    // فتح النافذة المنبثقة تلقائيًا عند تحميل الصفحة
+   
     window.addEventListener('load', function() {
       document.getElementById('popup').classList.remove('hidden');
     });
   
-    // إغلاق النافذة المنبثقة
+    
     function closePopup() {
       document.getElementById('popup').classList.add('hidden');
     }
   
-    // إرسال الإيميل عبر AJAX (يمكن تعديل هذا الجزء حسب الاحتياجات)
+   
     document.getElementById('emailForm').addEventListener('submit', function(e) {
       e.preventDefault();
       var email = document.getElementById('email').value;
-      // يمكنك هنا إضافة رمز لإرسال الإيميل عبر AJAX أو استخدام API
+      
       console.log('تم اشتراك ' + email);
-      closePopup(); // إغلاق النافذة بعد الاشتراك
+      closePopup(); 
     });
   </script>
 </body>
