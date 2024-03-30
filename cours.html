@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/style.css" rel="stylesheet">
+
+    <!-- ICON LINK START -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- ICON LINK END -->
+
+    <!-- GOOGLE FONTS START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS END -->
+
+    <style>
+        *{
+            font-family: "Scheherazade New", serif; 
+            scroll-behavior: smooth;    
+        }
+        
+       
+        .cours::-webkit-scrollbar {
+    width: 10px;
+        }
+
+      .cours:hover::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: rgb(68, 66, 77);
+        }
+    </style>
+</head>
+<body id="light" class="scroll-smooth">
+    <!--NAV START-->
+    <nav dir="rtl" class="flex flex-col  container z-50  bg-white  h-auto  mx-auto">
+      <div class="flex justify-between  p-3">
+        <div class="mr-2  text-3xl">
+            <h1 class="size[9.6rem] font-bold">UNIV-FSEI</h1>
+        </div>
+        <div class="flex justify-between h-auto mx-2 md:flex  min-h-10">
+            <a href="./index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+            <!-- <div id="dropdownButton" class="relative z-30">
+                <div onclick="toggleDropdown()" href=""  class=" text-red-600 hover:text-red-700  px-3 text-2xl cursor-pointer"><i class='bx bx-chevron-down'></i>الاقسام</div>
+                <div  id="dropdown" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                w-[100px]
+                shadow-md
+                bg-white
+                py-1
+                hidden
+    
+                 ">
+                    <a href="" class="hover:border-b-[0.5px] hover:font-bold">الاعلام الالي</a>
+                    <a href="" class="hover:border-b-[0.5px] hover:font-bold">رياضيات</a>
+                    <a href="" class="hover:border-b-[0.5px] hover:font-bold">علوم المادة</a>
+                    <a href="" class="hover:border-b-[0.5px] hover:font-bold">فيزياء</a>
+                    <a href="" class="hover:border-b-[0.5px] hover:font-bold">كيمياء</a>
+                </div>
+              </div> -->
+            <a href="" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
+            <a href="" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
+            <a href="" class=" text-red-600 hover:text-red-700  px-3 text-2xl">النوادي</a>
+            <a href="" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+            <!-- <div onclick="darckMode()">mmm</div> -->
+        </div>
+      </div>
+      <div class="border border-gray-300 mt-2"></div>
+    </nav>
+    <!--NAV END-->
+
+    
+    <!-- CONTAINER START -->
+    <section dir="rtl" class="flex my-4 ">
+        
+        <div id="cours" class="w-3/4  overflow-y-scroll cours  h-[500px] flex flex-wrap items-center justify-center ">
+            <div class="flex flex-wrap w-[220px] m-2" id="trunkBtn">
+                <a href="#trunk" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">جذع مشترك علوم المادة</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>
+            <div class="flex flex-wrap w-[220px] m-2" id="chimiqueBtn"  >
+                <a href="#chimique" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">قسم الكيمياء</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>
+            <div class="flex flex-wrap w-[220px] m-2" id="fisiqueBtn" >
+                <a href="#fisique" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">قسم الفيزياء</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>
+            <div class="flex flex-wrap w-[220px] m-2" id="comathBtn" >
+                <a href="#comath" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">جذع مشترك رياضيات و إعلام الي</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>
+            <div class="flex flex-wrap w-[220px] m-2" id="computerBtn" >
+                <a href="#computer" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">قسم الاعلام الالي</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>
+            <div class="flex flex-wrap w-[220px] m-2" id="mathBtn">
+                <a href="#math" class=" flex relative">
+                    <div class="absolute w-full h-full flex justify-center items-center">
+                        <h1 class="text-white font-bold text-xl font-sans ">قسم الرياضيات</h1>
+                    </div>
+                    <img src="./dist/img/trunk.jpeg" alt="" style="box-sizing: border-box;border-radius:
+                50% 50% 52% 48% / 72% 73% 27% 28%; " class="shadow-gray-300 shadow-xl "></a>
+            </div>   
+            <br>
+            <div class=" h-[10px] w-full z-30"></div>
+           
+                <!-- 1 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 " id="trunk">
+                    <div class="flex">
+                        <div id="tawkitDropdown1" class="relative z-30">
+                            <div onclick="tawkitDropdown1()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit1" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                   <div class="flex  justify-center">
+                    <h1 class="font-bold text-xl">جذع مشترك علوم المادة</h1>
+                   </div>
+                <div class="flex flex-wrap">
+                        <!-- CART COUR START -->
+                    <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                    hover:shadow-lg hover:shadow-slate-300
+                    mt-4">
+                        <div class="h-1/2">
+                            <img src="./dist/img/trunk.jpeg" alt="">
+                        </div>
+                        <div class="flex flex-col h-1/2">
+                            <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                            <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                <a href="#" class="w-full h-full text-white text-center">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CART COUR START -->
+
+
+                    
+                </div>
+                
+                </div>
+                <!-- 1 COURCE END -->
+
+                <!-- 2 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 hidden" id="chimique">
+                    <div class="flex">
+                        <div id="tawkitDropdown2" class="relative z-30">
+                            <div onclick="tawkitDropdown2()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit2" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex  justify-center">
+                     <h1 class="font-bold text-xl ">قسم الكيمياء</h1>
+                    </div>
+                 <div class="flex flex-wrap">
+                         <!-- CART COUR START -->
+                     <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                     hover:shadow-lg hover:shadow-slate-300
+                     mt-4">
+                         <div class="h-1/2">
+                             <img src="./dist/img/trunk.jpeg" alt="">
+                         </div>
+                         <div class="flex flex-col h-1/2">
+                             <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                             <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                             <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                 <a href="#" class="w-full h-full text-white text-center">المزيد...</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- CART COUR START -->
+
+ 
+                 </div>
+                 
+                 </div>
+                 <!-- 2 COURCE END -->
+
+                    <!-- 3 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 hidden" id="fisique">
+                    <div class="flex">
+                        <div id="tawkitDropdown3" class="relative z-30">
+                            <div onclick="tawkitDropdown3()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit3" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex  justify-center">
+                     <h1 class="font-bold text-xl ">قسم الفيزياء</h1>
+                    </div>
+                 <div class="flex flex-wrap">
+                         <!-- CART COUR START -->
+                     <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                     hover:shadow-lg hover:shadow-slate-300
+                     mt-4">
+                         <div class="h-1/2">
+                             <img src="./dist/img/trunk.jpeg" alt="">
+                         </div>
+                         <div class="flex flex-col h-1/2">
+                             <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                             <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                             <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                 <a href="#" class="w-full h-full text-white text-center">المزيد...</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- CART COUR START -->
+
+
+ 
+                 </div>
+                 
+                 </div>
+                 <!-- 3 COURCE END -->
+
+                    <!-- 4 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 hidden" id="comath">
+                    <div class="flex">
+                        <div id="tawkitDropdown4" class="relative z-30">
+                            <div onclick="tawkitDropdown4()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit4" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex  justify-center">
+                     <h1 class="font-bold text-xl ">جذع مشترك رياضيات و إعلام الي</h1>
+                    </div>
+                 <div class="flex flex-wrap">
+                         <!-- CART COUR START -->
+                     <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                     hover:shadow-lg hover:shadow-slate-300
+                     mt-4">
+                         <div class="h-1/2">
+                             <img src="./dist/img/trunk.jpeg" alt="">
+                         </div>
+                         <div class="flex flex-col h-1/2">
+                             <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                             <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                             <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                 <a href="#" class="w-full h-full text-white text-center">المزيد...</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- CART COUR START -->
+
+ 
+                 </div>
+                 
+                 </div>
+                 <!-- 4 COURCE END -->
+
+                    <!-- 5 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 hidden" id="computer">
+                    <div class="flex">
+                        <div id="tawkitDropdown5" class="relative z-30">
+                            <div onclick="tawkitDropdown5()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit5" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex  justify-center">
+                     <h1 class="font-bold text-xl ">قسم الاعلام الالي</h1>
+                    </div>
+                 <div class="flex flex-wrap">
+                         <!-- CART COUR START -->
+                     <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                     hover:shadow-lg hover:shadow-slate-300
+                     mt-4">
+                         <div class="h-1/2">
+                             <img src="./dist/img/trunk.jpeg" alt="">
+                         </div>
+                         <div class="flex flex-col h-1/2">
+                             <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                             <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                             <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                 <a href="#" class="w-full h-full text-white text-center">المزيد...</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- CART COUR START -->
+
+
+ 
+                 </div>
+                 
+                 </div>
+                 <!-- 5 COURCE END -->
+
+                    <!-- 6 COURS START -->
+                <div dir="rtl" class="flex flex-col  mt-4 hidden" id="math">
+                    <div class="flex">
+                        <div id="tawkitDropdown6" class="relative z-30">
+                            <div onclick="tawkitDropdown6()" href=""  class="   px-3 text-xl cursor-pointer">السنة الدراسية<i class='bx bx-chevron-down'></i></div>
+                            <div  id="tawkit6" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                            w-[100px]
+                            shadow-md
+                            bg-white
+                            py-1
+                            hidden
+                
+                             ">
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2022/2023</a>
+                                <a href="" class="hover:border-b-[0.5px] hover:font-bold">2023/2024</a>
+                                
+        
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex  justify-center">
+                     <h1 class="font-bold text-xl ">قسم الرياضيات</h1>
+                    </div>
+                 <div class="flex flex-wrap">
+                         <!-- CART COUR START -->
+                     <div class="flex flex-col h-fit w-[200px] border-[0.7px] border-gray-200
+                     hover:shadow-lg hover:shadow-slate-300
+                     mt-4">
+                         <div class="h-1/2">
+                             <img src="./dist/img/trunk.jpeg" alt="">
+                         </div>
+                         <div class="flex flex-col h-1/2">
+                             <h1>جذع لطلبة ادخل ادخل قوائم تخرج</h1>
+                             <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                             <div class="bg-red-500 m-3 rounded-lg p-2 flex hover:bg-gray-700">
+                                 <a href="#" class="w-full h-full text-white text-center">المزيد...</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- CART COUR START -->
+
+                 </div>
+                 
+                 </div>
+                 <!-- 6 COURCE END -->
+
+                   
+
+                 <!-- PAGINATION START -->
+            <div dir="ltr" class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+                <div class="flex flex-1 justify-between sm:hidden">
+                  <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                  <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                </div>
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between pr-2">
+                  <div>
+                    <p class="text-sm text-gray-700">
+                      من صفحة
+                      <span class="font-medium">1</span>
+                      الى
+                      <span class="font-medium">10</span>
+                      من اصل
+                      <span class="font-medium">97</span>
+                      صفحة
+                    </p>
+                  </div>
+                  <div>
+                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                      <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                        <span class="sr-only">Previous</span>
+                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                      <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-red-500 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+                      <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                      <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+                      <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+                      <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                        <span class="sr-only">Next</span>
+                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            <!-- PAGINATION END -->
+        </div>   
+        
+        <div id="tawkitHero" dir="rtl" class="w-1/3 h-fit flex overflow-ys cours flex-wrap scroll-my-1">
+            <div class="flex pb-2 ">
+                <h1 class="text-2xl border-b-[0.9px] border-red-600">- رزنامة التوقيت الاسبوعي:</h1>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+            <div class="flex  w-full flex-row h-[50px] border-[0.7px] border-dashed border-gray-200 ">
+                <div class="flex ">
+                    <img src="./dist/img/pdf.svg" alt="">
+                </div>
+                <div class="w-1/2 flec flex-col">
+                    <a href="#" ><h1 class="hover:border-b-[0.5px] border-red-400">رزنامة الامتحانات للسداسي الاول</h1></a>
+                    <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012</p>
+                </div>
+            </div>
+
+            <div class="bg-red-500 m-3 rounded-lg p-2  hover:bg-gray-700">
+                <a href="#" class="w-full h-full text-white" id="tawkitBtn">المزيد...</a>
+            </div>
+            
+          
+        </div>
+    </section>
+    
+   
+   
+
+    <!-- CONTAINER END -->
+
+  
+    
+
+    <!-- FOOTER START -->
+    <footer dir="rtl" class="flex flex-col  m-0 h-[227px]">
+        <div class="flex flex-row justify-center  items-center h-10 bg-red-500">
+            <a href="#" class="p-6"> <i class='bx bxl-facebook-circle text-[40px] shadow-lg rounded-full ' style='color:#ffffff'></i></a>
+            <a href="#"  class="p-6"><i class='bx bxl-instagram-alt text-[40px] shadow-lg rounded-full ' style='color:#ffffff'></i></a>
+            <a href="#"  class="p-6"><i class='bx bxl-twitter text-[40px] shadow-lg rounded-full' style='color:#ffffff; :hover{color: darkblue;}'></i></a>
+
+        </div>
+        <div class="flex justify-between">
+            <div class="flex flex-col w-3/12 justify-between m-3 rounded-[12px]">
+                <img class="w-1/2 "  src="/dist/img/logo.png" alt="LOGO" style="max-width: 100%;">
+                <p>crated by <a href="https://www.facebook.com/go.st.1610">Hadbi Mohamed</a></p>
+            </div>
+            <div class="flex flex-col justify-center items-start">
+                <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+                <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">التوقيت الاسبوعي</a>
+                <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الافواج</a>
+                <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">من نحن؟</a>
+    
+            </div>
+            <div dir="rtl" class="flex m-3">
+                <form action="POST" class="flex flex-col items-center justify-start">
+                    <label for="" class="text-xl m-3 ">ادخل ايميلك ليصلك الجديد</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="أدخـــل إيــميــلك">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-3" type="button">
+                        سجل
+                      </button>
+    
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+
+    <script>
+        function toggleDropdown(){
+            let dropdown = document.querySelector('#dropdownButton #dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        
+       // دالة فتح القائمة المنسدلة
+       function tawkitDropdown1(){
+    let dropdown1 = document.querySelector('#tawkitDropdown1 #tawkit1');
+    dropdown1.classList.toggle('hidden');
+  }
+
+  function tawkitDropdown2(){
+    let dropdown2 = document.querySelector('#tawkitDropdown2 #tawkit2');
+    dropdown2.classList.toggle('hidden');
+  }
+  function tawkitDropdown3(){
+    let dropdown3 = document.querySelector('#tawkitDropdown3 #tawkit3');
+    dropdown3.classList.toggle('hidden');
+  }
+  function tawkitDropdown4(){
+    let dropdown4 = document.querySelector('#tawkitDropdown4 #tawkit4');
+    dropdown4.classList.toggle('hidden');
+  }
+  function tawkitDropdown5(){
+    let dropdown5 = document.querySelector('#tawkitDropdown5 #tawkit5');
+    dropdown5.classList.toggle('hidden');
+  }
+  function tawkitDropdown6(){
+    let dropdown6 = document.querySelector('#tawkitDropdown6 #tawkit6');
+    dropdown6.classList.toggle('hidden');
+  }
+
+  
+        // function darckMode(){
+        //     let mode = document.body;
+        //     mode.classList.toggle('bg-gray-700');
+        // }
+    </script>
+    <script src="./dist/script.js"></script>
+</body>
+</html>

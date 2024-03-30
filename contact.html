@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/style.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- GOOGLE FONTS START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS END -->
+    <style>
+        *{
+            font-family: "Scheherazade New", serif;
+            
+            
+        }
+    </style>
+</head>
+<body id="light" class="">
+
+
+
+    
+<!-- <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center  hidden ">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div class="text-center relative">
+              <span onclick="closePopup()" class="absolute top-0 right-0 t-100px p-2  z-50 text-black cursor-pointer">×</span>
+
+        <h2 class="text-lg font-semibold mb-4">إشترك ليصلك الجديد</h2>
+        <form dir="rtl" id="emailForm">
+          <input type="email" id="email" placeholder="ادخل بريدك الإلكتروني" required class="block w-full px-4 py-2 border border-gray-300 rounded-md mb-3 focus:outline-none focus:border-blue-500">
+          <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">اشتراك</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+
+    <!--NAV START-->
+    <nav dir="rtl" class="flex flex-col  container z-50  bg-white  h-auto  mx-auto">
+      <div class="flex justify-between  p-3">
+        <div class="mr-2  text-3xl">
+            <h1 class="size[9.6rem] font-bold">UNIV-FSEI</h1>
+        </div>
+        <div class="sm:hidden flex justify-between h-auto mx-2 md:flex  min-h-10">
+            <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+            <div id="dropdownButton" class="relative z-30">
+                <div onclick="toggleDropdown()" href=""  class=" text-red-600 hover:text-red-700  px-3 text-2xl cursor-pointer"><i class='bx bx-chevron-down'></i>الاقسام</div>
+                <div  id="dropdown" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                w-[100px]
+                shadow-md
+                bg-white
+                py-1
+                hidden
+    
+                 ">
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">الاعلام الالي</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">رياضيات</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">علوم المادة</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">فيزياء</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">كيمياء</a>
+                </div>
+              </div>
+            <a href="sponsor.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
+            <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
+            <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">حول الكلية</a>
+            <a href="#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+            <!-- <div onclick="darckMode()">mmm</div> -->
+        </div>
+        <!-- <div id="mobile-btn"  class="hidden sm:flex  text-2xl"><i class='bx bx-menu' undefined ></i></div> -->
+        <!-- <div class="sm:flex hidden">
+            <div id="mobile-menu" class=" absolute flex hidden flex-col items-center space-y-4 font-bold bg-gray-50 py-8 left-6 right-6 drop-shadow-lg border border-gray-300">
+                <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+            <div id="dropdownButton" class="relative z-30">
+                <div onclick="toggleDropdown()" href=""  class=" text-red-600 hover:text-red-700  px-3 text-2xl cursor-pointer"><i class='bx bx-chevron-down'></i>الاقسام</div>
+                <div  id="dropdown" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
+                w-[100px]
+                shadow-md
+                bg-white
+                py-1
+                hidden
+    
+                 ">
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">الاعلام الالي</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">رياضيات</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">علوم المادة</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">فيزياء</a>
+                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">كيمياء</a>
+                </div>
+              </div>
+            <a href="sponsor.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
+            <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
+            <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">حول الكلية</a>
+            <a href="#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+            <div onclick="darckMode()">mmm</div> 
+            </div>-->
+        </div> 
+      </div>
+      <div class="border border-gray-300 mt-2"></div>
+    </nav>
+    <!--NAV END-->
+
+    <!-- CONTAINER START -->
+
+   <section dir="rtl" class="flex flex-row p-8">
+    <div class="w-1/2 flex flex-col">
+        <div dir="rtl" class="flex flex-col">
+        <h1 class="text-3xl mb-2">حول الكلية:</h1>
+        <h2 class="text-xl mb-3">التعريف بكلية العلوم الدقيقة  :</h2>
+        <p>
+            <strong class="text-lg">  الكلية :</strong
+                >هي وحدة تعليم عالي و تكوين في مجال البحث والمعرفة داخل الجامعة مانحة لشهادة تكوين هدفها التحصيل العلمي و البيداغوجي للطالب في الاختصاصات المعتمدة وهي رياضيات وإعلام آلي وفيزياء وكيمياء.</p>
+    </div>
+
+    <div dir="rtl" class="flex flex-col m-3">
+        <strong class="text-xl mb-2"> رسالة الكلية :</strong>
+        <ul class="list-decimal">
+            <li class="my-1">تعليم جامعي يمتاز بالجودة والشمول من خلال خلق بيئة محفزة للإبداع الفكري و توظيف تقنيات الابتكار.
+            </li>
+            <li class="my-1 ">
+                زيادة كفاءة إنتاجية الجامعة ونشر علوم المعرفة وفق اعلي معايير الجودة الشاملة بما يلبي متطلبات المجتمع ويساير التطور التكنولوجي .
+            </li>
+            <li class="my-1 ">
+                <strong>أهداف الكلية :</strong>إن أهداف كلية العلوم الدقيقة منبثقة من الأهداف العامة التي أرستها رئاسة جامعة الشهيد حمه لخضر و أقرتها الوصاية ضمن إستراتجية التعليم العالي والمعتمدة على تكوين إطارات بشرية تؤثر ايجابيا على التنمية الشاملة والمدعمة بما يلي :
+            </li>
+            <li class="my-1 ">تطبيق البرامج الوزارية لتأهيل كفاءات محلية ووطنية وإجراء بحوث ودراسات علمية.
+            </li>
+            <li class="my-1 ">
+                تكوين متخرجين قادرين على المنافسة بكفاءة عالية و بمواصفات البحث العلمى المؤهلة في المجال التربوي والصناعي وكذا العلمي.
+
+            </li>
+            <li class="my-1 ">
+                ربط البحث العلمي باحتياجات المجتمع والمساهمة في بناء مجتمع متطور يواكب المستجدات ويساير متطلبات العصر.
+
+            </li>
+            <li class="my-1 ">
+                الاستجابة لهيئات مؤسسات المجتمع المحلي والوطني وتعميق الروابط مع الشركاء الاجتماعيين والارتقاء بدور الكلية ومهامها في خدمة المجتمع.
+            </li>
+            <li class="my-1 ">
+                منح شهادات علمية بمعايير نوعية وجودة عالية تعكس الأداء الوظيفي للمتخرجين.
+            </li>
+            <li class="my-1 ">
+                تشجيع الكفاءات ورفع الولاء للجامعة من خلال حماية الحرية الاكاديمية والالتزام بأخلاقيات الأمانة العلمية.
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="w-1/2 flex justify-center flex-col">
+        <h1 class="text-2xl "> الكلية:</h1>
+        <div class="w-[500px] h-[500px]">
+            <img src="./dist/img/hero-1.jpg" alt="">
+        </div>
+        
+        <div class="flex flex-wrap">
+            <h1 class="text-2xl">كلمة العميد:</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, deserunt? Id maiores itaque unde suscipit fugiat dignissimos assumenda doloremque soluta rerum ut dolor, quos consequuntur delectus recusandae mollitia consequatur, voluptates earum iure excepturi tenetur facere laborum nisi! Saepe ut autem ab blanditiis fugit, architecto repellat! Quos, a. Eaque corporis atque quidem provident natus, libero magnam, tenetur quibusdam maxime perspiciatis rem praesentium ex sit quas aliquid dolore ullam. Officiis sunt odio maxime! Praesentium tempore quae fugit nobis, illum, dolorum ducimus explicabo sint ex, magni voluptate. Ex iusto omnis recusandae iure sit nesciunt nobis, ea unde ipsa quod voluptatibus repellendus. Nobis, ut!</p>
+        </div>
+    </div>
+   </section>
+
+    <!-- CONTAINER END -->
+
+    <!-- MAP START -->
+    <div dir="rtl" class="flex justify-center my-6">
+        <h1 class="text-center text-4xl">موقع الكلية:</h1>
+    </div>
+      <iframe class="w-full"
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.603974883484!2d1.243949125753296!3d36.22481964992491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12840e6e830f3e65%3A0x2ad281f9e43abfc8!2z2KzYp9mF2LnYqSDYrdiz2YrYqNipINio2YYg2KjZiNi52YTZiiAo2LHYptin2LPYqSDYp9mE2KzYp9mF2LnYqSAp!5e0!3m2!1sar!2sdz!4v1710698445932!5m2!1sar!2sdz" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
+    <!-- MAP END -->
+
+
+
+
+
+   <!-- FOOTER START -->
+    <footer dir="rtl" class="flex flex-col  m-0 h-[227px]">
+    <div class="flex flex-row justify-center  items-center h-10 bg-red-500">
+        <a href="#" class="p-6"> <i class='bx bxl-facebook-circle text-[40px] shadow-lg rounded-full hover:text-blue-500' style='color:#ffffff'></i></a>
+        <a href="#"  class="p-6"><i class='bx bxl-instagram-alt text-[40px] shadow-lg rounded-full' style='color:#ffffff'></i></a>
+        <a href="#"  class="p-6"><i class='bx bxl-twitter text-[40px] shadow-lg rounded-full' style='color:#ffffff'></i></a>
+
+    </div>
+    <div class="flex justify-between">
+        <div class="flex flex-col w-3/12 justify-between m-3 rounded-[12px]">
+            <img class="w-1/2 "  src="/dist/img/logo.png" alt="LOGO" style="max-width: 100%;">
+            <p>designed by <a href="#">Hadbi Mohamed</a></p>
+        </div>
+        <div class="flex flex-col justify-center items-start">
+            <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+            <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">التوقيت الاسبوعي</a>
+            <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الافواج</a>
+            <a href="" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">من نحن؟</a>
+
+        </div>
+        <div dir="rtl" class="flex m-3">
+            <form action="POST" class="flex flex-col items-center justify-start">
+                <label for="" class="text-xl m-3 ">ادخل ايميلك ليصلك الجديد</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="أدخـــل إيــميــلك">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-3" type="button">
+                    سجل
+                  </button>
+
+            </form>
+        </div>
+    </div>
+</footer> 
+<!-- FOOTER END -->
+<script>
+    function toggleDropdown(){
+        let dropdown = document.querySelector('#dropdownButton #dropdown');
+        dropdown.classList.toggle('hidden');
+    }
+    // function darckMode(){
+    //     let mode = document.body;
+    //     mode.classList.toggle('bg-gray-700');
+    // }
+</script>
+</body>
+</html>
