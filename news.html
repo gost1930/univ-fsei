@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/index.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- GOOGLE FONTS START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GOOGLE FONTS END -->
+    <style>
+   
+    </style>
+</head>
+<body id="light relative">
+
+
+
+    <!-- SUBSCIBE WINDOW START -->
+<!-- <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center  hidden ">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div class="text-center relative">
+              <span onclick="closePopup()" class="absolute top-0 right-0 t-100px p-2  z-50 text-black cursor-pointer">×</span>
+
+        <h2 class="text-lg font-semibold mb-4">إشترك ليصلك الجديد</h2>
+        <form dir="rtl" id="emailForm">
+          <input type="email" id="email" placeholder="ادخل بريدك الإلكتروني" required class="block w-full px-4 py-2 border border-gray-300 rounded-md mb-3 focus:outline-none focus:border-blue-500">
+          <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">اشتراك</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+    <!-- SUBSCIBE WINDOW END -->
+
+   <!--NAV START-->
+   <nav dir="rtl" class="flex flex-col  container z-50  bg-white  h-auto  mx-auto ">
+    <div class="flex justify-between  p-3 ">
+      <div class=" h-10">
+          <img src="./dist/img/logo.png" alt="" class="h-14">
+      </div>
+      <div class=" hidden md:flex justify-between h-auto mx-2 min-h-10">
+          <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+          <a href="cours.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الدروس</a>
+          <a href="index.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
+          <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
+          <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">من نحن</a>
+          <a href="index.html#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+      </div>
+      <div onclick="navBtn()"  class="flex md:hidden">
+          <i class='bx bx-menu text-4xl active:text-red-500'></i>
+      </div>
+      <div class=" hidden flex-col items-center justify-start absolute" id="mobileNav">
+          <a href="" class=" text-red-600 hover:text-red-700 py-3 text-2xl"> الإعلانات</a>
+          <a href="" class=" text-red-600 hover:text-red-700  py-3 text-2xl">الاخبار</a>
+          <a href="" class=" text-red-600 hover:text-red-700  py3 text-2xl">النوادي</a>
+          <a href="" class=" text-white py-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+      </div>
+    </div>
+    <div class="border border-gray-300 mt-2"></div>
+  </nav>
+  <!--NAV END-->
+    
+    <!-- HERO START -->
+    <section>
+        <div class="max-w-full relative">
+
+            <div id="default-carousel" class="relative" data-carousel="static">
+             
+                <div class="overflow-hidden relative h-56  sm:h-64 xl:h-80 2xl:h-96">
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
+                        <img src="./dist/img/banner.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./dist/img/hero-1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./dist/img//ch.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    </div>
+                </div>
+                
+                
+                <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+               
+                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 hover:bg-gray-200 bg-white/65  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                        <svg class="w-5 h-5  sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span class="hidden">Anterior</span>
+                    </span>
+                </button>
+                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 hover:bg-gray-200 bg-white/65 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                        <svg class="w-5 h-5  sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="hidden">Siguiente</span>
+                    </span>
+                </button>
+            </div>
+        
+            </p>
+            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+            <div class="flex absolute z-50 right-1 top-1">
+                <p href="" class=" text-white py-1 px-3 rounded-tl-xl rounded-bl-xl rounded-br-xl bg-red-600 " >آخر الأخبار</p>
+            </div>
+        </div>
+   
+    </section>
+    <!-- HERO END -->
+
+    <!--CONTAINER START-->
+    <!-- SPNSOR START -->
+    <section dir="rtl " class="flex md:flex-row-reverse  md:flex-nowrap flex-col  mt-10 ">
+        <div class="md:w-3/4">
+            <h1 dir="rtl" class="text-black text-center md:text-starte font-bold text-4xl font-sans border-b-2 border-red-500 ml-3">الأخبار</h1>
+            <div class="flex flex-wrap items-start justify-center overflow-scroll overflow-x-auto   my-2  md:overflow-y-scroll cours w-full h-[350px] md:h-fit md:max-h-[900px]">
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+                <div dir="rtl" class=" flex flex-col items-start h-[300px] w-[180px] md:w-[205px] overflow-hidden m-1 hover:shadow-2xl  transition-all hover:z-10
+                    border border-b-slate-700 hover:border  hover:border-gray-500 rounded-[12px]">
+                    <a href="#">
+                        <div class="h-1/2">
+                            <img src="./dist/img/1.svg" alt="" style="min-width: 100%;">
+                        </div>
+                        <div class="h-1/2 flex flex-col mt-0 justify-start items-start">
+                            <h3>قوائم الطلبة المعنيين بالامتحانات الإستردراكية خاص بقسم الرياضيات</h3>
+                            <p>التلاميذ</p>
+                            <br>
+                            <p><i class='bx bxs-calendar-edit text-red-500'></i>12/12/2012 </p>
+                        </div>
+                    </a>
+                </div>
+           
+
+
+    
+     
+        
+            </div>
+            <!-- PAGINATION START -->
+            <div class="flex items-center justify-between  bg-white px-4 py-3 sm:px-6">
+                <div class="flex flex-1 justify-between sm:hidden">
+                  <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                  <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                </div>
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm text-gray-700">
+                      من صفحة
+                      <span class="font-medium">1</span>
+                      الى
+                      <span class="font-medium">10</span>
+                      من اصل
+                      <span class="font-medium">97</span>
+                      صفحة
+                    </p>
+                  </div>
+                  <div>
+                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                      <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                        <span class="sr-only">Previous</span>
+                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                      <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-red-500 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+                      <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                      <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+                      <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+                      <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                        <span class="sr-only">Next</span>
+                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            <!-- PAGINATION END -->
+              
+        </div>
+  <div class="flex flex-col w-[416px]">
+                  <h1 dir="rtl" class="text-black font-bold text-4xl font-sans border-b-2 border-red-500">روابط مختصرة</h1>
+            <div class="flex flex-wrap flex-row-reverse items-center justify-center  overflow-y-scroll cours h-fit">
+                <div class="flex flex-col items-center justify-center rounded-xl
+                shadow-xl 
+                w-[100px] h-fit 
+                mx-1 my-1">
+                  <a href="#" class="flex flex-col items-center justify-center">
+                    <h1 class="text-3xl"><i class='bx bx-group'></i></h1>
+                    <p>الافواج</p>
+                  </a>
+                </div>
+                <div class="flex flex-col itmes-start justify-end  rounded-xl
+                      shadow-2xl 
+                        w-[120px] h-fit
+                        mx-1 my-1">
+                          <a href="#" class="flex flex-col items-center justify-center">
+                            <h1 class="text-3xl"><i class='bx bxs-calendar-edit '></i></h1>
+                            <p>التوقيت الاسبوعي</p>
+                          </a>
+                </div>
+                <div class="flex flex-col items-center justify-center rounded-xl
+                shadow-xl 
+                w-[100px] h-fit p-1
+                mx-1 my-1">
+                          <a href="#" class="flex flex-col items-center justify-center">
+                            <h1 class="text-3xl"><i class='bx bxs-edit'></i></h1>
+                            <p>الوثائق</p>
+                          </a>
+                        </div>
+                        <div class="flex flex-col items-center justify-center rounded-xl
+                        shadow-xl 
+                        w-[100px] h-fit p-1
+                        mx-1 my-1">
+                      <a href="#" class="flex flex-col items-center justify-center">
+                        <h1 class="text-3xl"><i class='bx bxs-vial' ></i></h1>
+                        <p>المخابر</p>
+                      </a>
+                    </div>  
+                    <div class="flex flex-col items-center justify-center rounded-xl
+                    shadow-xl 
+                    w-[100px] h-fit p-1
+                    mx-1 my-1">
+                  <a href="./contact.html#map" class="flex flex-col items-center justify-center">
+                    <h1 class="text-3xl"><i class='bx bxs-map-alt'></i></h1>
+                    <p>موقع الجامعة</p>
+                  </a>
+                </div>  
+                <div class="flex flex-wrap flex-row-reverse">
+                  
+                    
+                    <div class="flex flex-wrap flex-row-reverse">
+                        
+                <div class="flex flex-wrap flex-row-reverse">
+
+                        <!-- NEWS START -->
+                        <h1 class="font-bold">:الإعلانات</h1>
+                      <div dir="rtl" class="flex  h-[100px] w-full   ml-3 border border-gray-200 hover:shadow-lg hover:shadow-gray-400">
+                        <a href="#" class="flex flex-row">
+                            <img style="max-height: 100%; min-height: 100%;" src="./dist/img/1.svg" alt="">
+                            <div class="w-3/4 flex flex-col mt-1 mb-3">
+                                <h1>محاضرة بعنوان إعداد مذكرة تخرج لطلبة الإعلام الآلي من تنظيم ناديGDCS</h1>
+                                <p><i class='bx bxs-calendar-edit '></i>12/12/2012</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div dir="rtl" class="flex  h-[100px] w-full   ml-3 border border-gray-200 hover:shadow-lg hover:shadow-gray-400">
+                        <a href="#" class="flex flex-row">
+                            <img style="max-height: 100%; min-height: 100%;" src="./dist/img/1.svg" alt="">
+                            <div class="w-3/4 flex flex-col mt-1 mb-3">
+                                <h1>محاضرة بعنوان إعداد مذكرة تخرج لطلبة الإعلام الآلي من تنظيم ناديGDCS</h1>
+                                <p><i class='bx bxs-calendar-edit '></i>12/12/2012</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div dir="rtl" class="flex  h-[100px] w-full   ml-3 border border-gray-200 hover:shadow-lg hover:shadow-gray-400">
+                        <a href="#" class="flex flex-row">
+                            <img style="max-height: 100%; min-height: 100%;" src="./dist/img/1.svg" alt="">
+                            <div class="w-3/4 flex flex-col mt-1 mb-3">
+                                <h1>محاضرة بعنوان إعداد مذكرة تخرج لطلبة الإعلام الآلي من تنظيم ناديGDCS</h1>
+                                <p><i class='bx bxs-calendar-edit '></i>12/12/2012</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div dir="rtl" class="flex  h-[100px] w-full   ml-3 border border-gray-200 hover:shadow-lg hover:shadow-gray-400">
+                        <a href="#" class="flex flex-row">
+                            <img style="max-height: 100%; min-height: 100%;" src="./dist/img/1.svg" alt="">
+                            <div class="w-3/4 flex flex-col mt-1 mb-3">
+                                <h1>محاضرة بعنوان إعداد مذكرة تخرج لطلبة الإعلام الآلي من تنظيم ناديGDCS</h1>
+                                <p><i class='bx bxs-calendar-edit '></i>12/12/2012</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div dir="rtl" class="flex  h-[100px] w-full   ml-3 border border-gray-200 hover:shadow-lg hover:shadow-gray-400">
+                        <a href="#" class="flex flex-row">
+                            <img style="max-height: 100%; min-height: 100%;" src="./dist/img/1.svg" alt="">
+                            <div class="w-3/4 flex flex-col mt-1 mb-3">
+                                <h1>محاضرة بعنوان إعداد مذكرة تخرج لطلبة الإعلام الآلي من تنظيم ناديGDCS</h1>
+                                <p><i class='bx bxs-calendar-edit '></i>12/12/2012</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="bg-red-500 m-3 rounded-lg p-2  hover:bg-gray-700">
+                        <a href="#" class="w-full h-full text-white" id="tawkitBtn">المزيد...</a>
+                    </div>
+
+                    
+
+                        <!-- NEWS END -->
+                    </div>
+        </div>
+    </section>
+    <!-- SPONSOR END -->
+    
+
+
+    <!-- CONTACT START -->
+    <section id="contact" dir="rtl" class="flex flex-col items-center justify-center w-full h-full p-4 my-5">
+        <h1 class="text-center text-4xl my-4">إتصل بنا</h1>
+        <div class="flex flex-col-reverse md:flex-row w-full md:w-[80%] h-fit rounded-xl shadow-lg  ">
+            <div class="flex flex-col  md:w-1/2 md:border-l border-double ">
+                <form action="#" class="flex flex-col p-3">
+                    <label for="">الإسم:</label>
+                    <input class="rounded-xl h-11 p-2 appearance-none focus:outline-none mb-3
+                    shadow-inner shadow-gray-400
+                    " type="text" name="name" id="name" placeholder="إسمك الكامل" required>
+    
+                    <label for="">الإيميل:</label>
+                    <input class="rounded-xl h-11 p-2  focus:outline-none mb-3 shadow-inner shadow-gray-400
+                    " type="email" name="email" id="email" placeholder="إيميلك الخاص">
+    
+                    <label for="#">الرسالة:</label>
+                    <textarea class="rounded-xl h-[100px] md:h-auto  p-2  focus:outline-none shadow-inner shadow-gray-400" name="" id="" cols="30" rows="10" placeholder="ادخل الرسالة..." required></textarea>
+    
+                    <button type="submit" class="w-[100px]  bg-red-500 mt-3 rounded-lg text-white hover:scale-[1.1] hover:bg-slate-700 transition-all">أرسل</button>
+                </form>
+            </div>
+            <div class="flex flex-wrap  md:w-1/2 p-5">
+                <div class="flex flex-col ">
+                    <ul class="my-10">
+                        <li><i class='bx bxs-phone bx-rotate-270' ></i>رقم الهاتف الأرضي:<a href="#">21333333+</a></li>
+                        <li>رقم الهاتف الجوال:<a href="#">066666666</a></li>
+                    </ul>
+                    <div class="flex flex-wrap justify-center items-center w-full h-fit p-5">
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                            <img src="./dist/img/facebook.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                        <img src="./dist/img/instagram.png" alt="">
+                    </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                            <img src="./dist/img/twitter.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                            <img src="./dist/img/whatsapp.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                            <img src="./dist/img/linkedin.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex rounded-full h-[80px] w-[80px] m-2">
+                            <img src="./dist/img/social.png" alt="">
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT END -->
+
+
+   
+   
+   
+   
+    <!-- SCROLL BTN START -->
+    <button id="scrollBtn" class=" w-[50px] h-[50px] rounded-full z-50 bg-red-500 hover:bg-red-700 text-white cursor-pointer fixed bottom-[10px] right-[10px]"><i class='bx bxs-up-arrow' style='color:#ffffff'  ></i></button>
+    <!-- SCROLL BTN END -->
+
+    <!-- FOOTER START -->
+    <footer dir="rtl" class="flex flex-col  m-0 h-[227px]">
+        <div class="flex flex-row justify-center  items-center h-10 bg-red-500">
+            <a href="#" class="p-6"> <i class='bx bxl-facebook-circle text-[40px] shadow-lg rounded-full hover:text-blue-500' style='color:#ffffff'></i></a>
+            <a href="#"  class="p-6"><i class='bx bxl-instagram-alt text-[40px] shadow-lg rounded-full' style='color:#ffffff'></i></a>
+            <a href="#"  class="p-6"><i class='bx bxl-twitter text-[40px] shadow-lg rounded-full' style='color:#ffffff'></i></a>
+
+        </div>
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+            <div class="flex flex-col w-3/12 justify-between m-3 rounded-[12px] ">
+                <img class="w-1/2 "  src="./dist/img/logo.png" alt="LOGO" style="max-width: 100%;">
+                <p>designed by <a href="#">Hadbi Mohamed</a></p>
+            </div>
+            <div class="flex flex-col justify-center items-start">
+                <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+                <a href="#" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">التوقيت الاسبوعي</a>
+                <a href="#" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الافواج</a>
+                <a href="contact.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">من نحن؟</a>
+    
+            </div>
+            <div dir="rtl" class="flex m-3">
+                <form action="POST" class="flex flex-col items-center justify-start">
+                    <label for="" class="text-xl m-3 ">ادخل ايميلك ليصلك الجديد</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="أدخـــل إيــميــلك">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-3" type="button">
+                        سجل
+                      </button>
+    
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="./dist/script.js"></script>
+    <script src="./dist/scroll.js"></script>
+    <script>
+        function toggleDropdown(){
+            let dropdown = document.querySelector('#dropdownButton #dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        // function darckMode(){
+        //     let mode = document.body;
+        //     mode.classList.toggle('bg-gray-700');
+        // }
+    </script>
+   <script>
+   
+    window.addEventListener('load', function() {
+      document.getElementById('popup').classList.remove('hidden');
+    });
+  
+    
+    function closePopup() {
+      document.getElementById('popup').classList.add('hidden');
+    }
+  
+   
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value;
+      
+      console.log('تم اشتراك ' + email);
+      closePopup(); 
+    });
+  </script>
+</body>
+</html>

@@ -5,6 +5,6 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+    "w": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
   }
 }

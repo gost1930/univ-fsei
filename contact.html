@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/index.css">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- GOOGLE FONTS START -->
@@ -11,13 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- GOOGLE FONTS END -->
-    <style>
-        *{
-            font-family: "Scheherazade New", serif;
-            
-            
-        }
-    </style>
+  
 </head>
 <body id="light" class="">
 
@@ -39,74 +34,38 @@
   </div> -->
 
 
-    <!--NAV START-->
-    <nav dir="rtl" class="flex flex-col  container z-50  bg-white  h-auto  mx-auto">
-      <div class="flex justify-between  p-3">
-        <div class="mr-2  text-3xl">
-            <h1 class="size[9.6rem] font-bold">UNIV-FSEI</h1>
-        </div>
-        <div class="sm:hidden flex justify-between h-auto mx-2 md:flex  min-h-10">
-            <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
-            <div id="dropdownButton" class="relative z-30">
-                <div onclick="toggleDropdown()" href=""  class=" text-red-600 hover:text-red-700  px-3 text-2xl cursor-pointer"><i class='bx bx-chevron-down'></i>الاقسام</div>
-                <div  id="dropdown" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
-                w-[100px]
-                shadow-md
-                bg-white
-                py-1
-                hidden
-    
-                 ">
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">الاعلام الالي</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">رياضيات</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">علوم المادة</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">فيزياء</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">كيمياء</a>
-                </div>
-              </div>
-            <a href="sponsor.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
-            <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
-            <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">حول الكلية</a>
-            <a href="#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
-            <!-- <div onclick="darckMode()">mmm</div> -->
-        </div>
-        <!-- <div id="mobile-btn"  class="hidden sm:flex  text-2xl"><i class='bx bx-menu' undefined ></i></div> -->
-        <!-- <div class="sm:flex hidden">
-            <div id="mobile-menu" class=" absolute flex hidden flex-col items-center space-y-4 font-bold bg-gray-50 py-8 left-6 right-6 drop-shadow-lg border border-gray-300">
-                <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
-            <div id="dropdownButton" class="relative z-30">
-                <div onclick="toggleDropdown()" href=""  class=" text-red-600 hover:text-red-700  px-3 text-2xl cursor-pointer"><i class='bx bx-chevron-down'></i>الاقسام</div>
-                <div  id="dropdown" class="absolute flex flex-col items-center    top-[55px]   rounded-[12px]
-                w-[100px]
-                shadow-md
-                bg-white
-                py-1
-                hidden
-    
-                 ">
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">الاعلام الالي</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">رياضيات</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">علوم المادة</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">فيزياء</a>
-                    <a href="#" class="hover:border-b-[0.5px] hover:font-bold">كيمياء</a>
-                </div>
-              </div>
-            <a href="sponsor.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
-            <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
-            <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">حول الكلية</a>
-            <a href="#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
-            <div onclick="darckMode()">mmm</div> 
-            </div>-->
-        </div> 
+   <!--NAV START-->
+   <nav dir="rtl" class="flex flex-col  container z-50  bg-white  h-auto  mx-auto ">
+    <div class="flex justify-between  p-3 ">
+      <div class=" h-10">
+          <img src="./dist/img/logo.png" alt="" class="h-14">
       </div>
-      <div class="border border-gray-300 mt-2"></div>
-    </nav>
-    <!--NAV END-->
+      <div class=" hidden md:flex justify-between h-auto mx-2 min-h-10">
+          <a href="index.html" class=" hover:border-spacing-1 text-red-600 hover:text-red-700 px-3  text-2xl">الرئيسية</a>
+          <a href="cours.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الدروس</a>
+          <a href="index.html" class=" text-red-600 hover:text-red-700 px-3 text-2xl"> الإعلانات</a>
+          <a href="news.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">الاخبار</a>
+          <a href="contact.html" class=" text-red-600 hover:text-red-700  px-3 text-2xl">من نحن</a>
+          <a href="index.html#contact" class=" text-white py-1 px-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+      </div>
+      <div onclick="navBtn()"  class="flex md:hidden">
+          <i class='bx bx-menu text-4xl active:text-red-500'></i>
+      </div>
+      <div class=" hidden flex-col items-center justify-start absolute" id="mobileNav">
+          <a href="" class=" text-red-600 hover:text-red-700 py-3 text-2xl"> الإعلانات</a>
+          <a href="" class=" text-red-600 hover:text-red-700  py-3 text-2xl">الاخبار</a>
+          <a href="" class=" text-red-600 hover:text-red-700  py3 text-2xl">النوادي</a>
+          <a href="" class=" text-white py-3 rounded-full bg-red-600 hover:bg-slate-900" >إتصل بنا</a>
+      </div>
+    </div>
+    <div class="border border-gray-300 mt-2"></div>
+  </nav>
+  <!--NAV END-->
 
     <!-- CONTAINER START -->
 
-   <section dir="rtl" class="flex flex-row p-8">
-    <div class="w-1/2 flex flex-col">
+   <section dir="rtl" class="flex flex-col md:flex-row p-3 md:p-8">
+    <div class="md:w-1/2 flex flex-col">
         <div dir="rtl" class="flex flex-col">
         <h1 class="text-3xl mb-2">حول الكلية:</h1>
         <h2 class="text-xl mb-3">التعريف بكلية العلوم الدقيقة  :</h2>
@@ -148,9 +107,9 @@
         </ul>
     </div>
 </div>
-    <div class="w-1/2 flex justify-center flex-col">
+    <div class="md:w-1/2 flex justify-center flex-col">
         <h1 class="text-2xl "> الكلية:</h1>
-        <div class="w-[500px] h-[500px]">
+        <div class="md:w-[500px] h-fit max-h-[500px]">
             <img src="./dist/img/hero-1.jpg" alt="">
         </div>
         
@@ -164,7 +123,7 @@
     <!-- CONTAINER END -->
 
     <!-- MAP START -->
-    <div dir="rtl" class="flex justify-center my-6">
+    <div dir="rtl" class="flex justify-center my-6" id="map">
         <h1 class="text-center text-4xl">موقع الكلية:</h1>
     </div>
       <iframe class="w-full"

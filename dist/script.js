@@ -1,3 +1,11 @@
+// NAV BAR START
+function navBtn(){
+  let menu = document.getElementById('mobileNav');
+  menu.classList.toggle('hidden')
+}
+// NAV BAR END
+
+
 const btnElements = {
     terunk: document.getElementById('trunkBtn'),
     chimique: document.getElementById('chimiqueBtn'),
@@ -53,6 +61,34 @@ const btnElements = {
     tawkitHero.classList.remove('hidden');
 
   })
+
+
+
+
+let currentSlide = 0; // Initialize the current slide index
+
+function previousSlide() {
+    currentSlide = (currentSlide - 1 + document.querySelectorAll('.slide').length) % document.querySelectorAll('.slide').length;
+    toggleSlides();
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % document.querySelectorAll('.slide').length;
+    toggleSlides();
+}
+
+function toggleSlides() {
+    let slides = document.querySelectorAll('.slide');
+
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.classList.remove('hidden');
+        } else {
+            slide.classList.add('hidden');
+        }
+    });
+}
+
 
 
 
